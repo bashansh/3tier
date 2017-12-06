@@ -34,9 +34,9 @@ variable "privatevlanid" {
   description = "privatelanid"
 }
 
-variable "ibm_storage_file_burstvs" {
+variable "ibm_storage_file" {
   default = "input needed"
-  description = "ibm_storage_file_burstvs"
+  description = "ibm_storage_file"
 }
 
 # Below was taken from LAMP example
