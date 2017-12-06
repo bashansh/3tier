@@ -12,6 +12,14 @@
 # ©Copyright IBM Corp. 2017.
 #
 ################################################################
+variable "softlayer_username" {
+  default = "insert username"
+  description = "Your Bluemix Infrastructure (SoftLayer) user name."
+}
+variable "softlayer_api_key" {
+  default = "insert key"
+  description = "Your Bluemix Infrastructure (SoftLayer) API key."
+}
 variable "hostname" {
   default = "hostname"
   description = "The hostname for the instance."
