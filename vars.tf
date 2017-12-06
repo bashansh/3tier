@@ -12,14 +12,35 @@
 # ©Copyright IBM Corp. 2017.
 #
 ################################################################
+# Below added for 3 tier work
+
 variable "ibm_sl_username" {
   default = "insert username"
   description = "Your Bluemix Infrastructure (SoftLayer) user name."
 }
+
 variable "ibm_sl_api_key" {
   default = "insert key"
   description = "Your Bluemix Infrastructure (SoftLayer) API key."
 }
+
+variable "osrefcode" {
+  default = "input needed"
+  description = "osrefcode"
+}
+
+variable "privatevlanid" {
+  default = "input needed"
+  description = "privatelanid"
+}
+
+variable "ibm_storage_file.burstvs" {
+  default = "input needed"
+  description = "ibm_storage_file.burstvs"
+}
+
+# Below was taken from LAMP example
+
 variable "hostname" {
   default = "hostname"
   description = "The hostname for the instance."
