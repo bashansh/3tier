@@ -12,11 +12,11 @@
 # ©Copyright IBM Corp. 2017.
 #
 ################################################################
-variable "slusername" {
+variable "ibm_sl_username" {
   default = "insert username"
   description = "Your Bluemix Infrastructure (SoftLayer) user name."
 }
-variable "slapikey" {
+variable "ibm_sl_api_key" {
   default = "insert key"
   description = "Your Bluemix Infrastructure (SoftLayer) API key."
 }
