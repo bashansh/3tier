@@ -48,7 +48,7 @@ resource "ibm_compute_vm_instance" "burstvs" {
   hostname = "${format("webvs-%02d", count.index + 1)}"
   domain = "${var.domain}"
   datacenter = "${var.datacenter}"
-  file_storage_ids = ["${ibm_storage_file.burstvs.id}"]
+  file_storage_ids = ["${ibm_storage_file_burstvs.id}"]
   network_speed = 10
   cores = 1
   memory = 1024
@@ -69,7 +69,7 @@ resource "ibm_compute_vm_instance" "burstvs" {
   hostname = "${format("appvs-%02d", count.index + 1)}"
   domain = "${var.domain}"
   datacenter = "${var.datacenter}"
-  file_storage_ids = ["${ibm_storage_file.burstvs.id}"]
+  file_storage_ids = ["${ibm_storage_file_burstvs.id}"]
   network_speed = 10
   cores = 1
   memory = 1024
