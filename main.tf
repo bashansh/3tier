@@ -83,5 +83,5 @@ resource "ibm_compute_vm_instance" "app_vm" {
 }
 
 output "public_ip" {
-	value = "http://${ibm_compute_vm_instance.web_vm.ipv4_address}"
+	value = "http://${ibm_compute_vm_instance.web_vm.*.ipv4_address}"
 }
