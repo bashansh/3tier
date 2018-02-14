@@ -125,5 +125,6 @@ variable "ssh_key" {
 #}
 
 output "public_ip" {
-	value = "http://${ibm_compute_vm_instance.vm.ipv4_address}"
+#	value = "http://${ibm_compute_vm_instance.vm.ipv4_address}"
+	default = "input needed"
 }
