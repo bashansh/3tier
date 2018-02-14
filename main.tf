@@ -43,7 +43,7 @@ resource "ibm_storage_file" "appVS" {
 ########################################################
 
 resource "ibm_compute_vm_instance" "web_vm" {
-  count = "2"
+  count = "1"
   os_reference_code = "${var.osrefcode}"
   hostname = "${format("webvs-%02d", count.index + 1)}"
   domain = "${var.domain}"
@@ -83,5 +83,5 @@ resource "ibm_compute_vm_instance" "app_vm" {
 }
 
 output "public_ip" {
-	value = "http://${ibm_compute_vm_instance.web_vm.*.ipv4_address}"
+	value = "http://${ibm_compute_vm_instance.web_vm.ipv4_address}"
 }
