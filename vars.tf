@@ -99,11 +99,12 @@ variable "ssh_key" {
   description = "Your public SSH key to access the VM."
 }
 
-resource "ibm_compute_ssh_key" "ssh_key" {
-    label = "${var.ssh_label}"
-    notes = "${var.ssh_notes}"
-    public_key = "${var.ssh_key}"
-}
+# ssh_key resource defined in main
+#resource "ibm_compute_ssh_key" "ssh_key" {
+#    label = "${var.ssh_label}"
+#    notes = "${var.ssh_notes}"
+#    public_key = "${var.ssh_key}"
+#}
 
 resource "ibm_compute_vm_instance" "vm" {
   hostname                 = "${var.hostname}"
