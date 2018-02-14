@@ -37,7 +37,7 @@ resource "ibm_security_group_rule" "allow_https" {
     security_group_id = "${ibm_security_group.sg1.id}"
 }
 
-resource "ibm_security_group_rule" "allow_data port" {
+resource "ibm_security_group_rule" "allow_data_port" {
     direction = "egress"
     ether_type = "IPv4"
     port_range_min = 11443
