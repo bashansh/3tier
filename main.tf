@@ -42,13 +42,13 @@ resource "ibm_storage_file" "appVS" {
 #Create Web Tier VS
 ########################################################
 
-resource "ibm_compute_vm_instance" "burstvs" {
+resource "ibm_compute_vm_instance" "web_vm" {
   count = "2"
   os_reference_code = "${var.osrefcode}"
   hostname = "${format("webvs-%02d", count.index + 1)}"
   domain = "${var.domain}"
   datacenter = "${var.datacenter}"
-  file_storage_ids = ["${ibm_storage_file.burstvs.id}"]
+  file_storage_ids = ["${ibm_storage_file.webVS.id}"]
   network_speed = 10
   cores = 1
   memory = 1024
@@ -64,13 +64,13 @@ resource "ibm_compute_vm_instance" "burstvs" {
 #Create App Tier VS
 ########################################################
 
-resource "ibm_compute_vm_instance" "burstvs" {
+resource "ibm_compute_vm_instance" "app_vm" {
   count = "2"
   os_reference_code = "${var.osrefcode}"
   hostname = "${format("appvs-%02d", count.index + 1)}"
   domain = "${var.domain}"
   datacenter = "${var.datacenter}"
-  file_storage_ids = ["${ibm_storage_file.burstvs.id}"]
+  file_storage_ids = ["${ibm_storage_file.appVS.id}"]
   network_speed = 10
   cores = 1
   memory = 1024
