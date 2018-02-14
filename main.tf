@@ -81,3 +81,7 @@ resource "ibm_compute_vm_instance" "app_vm" {
   # private_security_group_ids = "${module.security.sg1_id}"
   private_vlan_id = "${var.privatevlanid}"
 }
+
+output "public_ip" {
+	value = "http://${ibm_compute_vm_instance.web_vm.ipv4_address}"
+}
