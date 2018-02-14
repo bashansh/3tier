@@ -50,7 +50,7 @@ variable "domain" {
   description = "The domain for the instance."
 }
 variable "datacenter" {
-  default = "wdc01"
+  default = "dal10"
   description = "The data center to create resources in."
 }
 variable "os_reference_code" {
