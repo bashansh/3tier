@@ -124,7 +124,6 @@ variable "ssh_key" {
 #  user_metadata            = "${file("install.yml")}"
 #}
 
-output "public_ip" {
+#output "public_ip" {
 #	value = "http://${ibm_compute_vm_instance.vm.ipv4_address}"
-	default = "input needed"
-}
+#}
