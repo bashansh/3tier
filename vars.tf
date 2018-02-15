@@ -54,7 +54,7 @@ variable "datacenter" {
   description = "The data center to create resources in."
 }
 variable "os_reference_code" {
-  default = "CENTOS_7"
+  default = "CENTOS_7_64"
   description = "The operating system reference code used to provision the computing instance."
 }
 variable "cores" {
