@@ -24,10 +24,10 @@ variable "ibm_sl_api_key" {
   description = "Your Bluemix Infrastructure (SoftLayer) API key."
 }
 
-#variable "osrefcode" {
-#  default = "input needed"
-#  description = "osrefcode"
-#}
+variable "osrefcode" {
+  default = "CENTOS_7_64"
+  description = "os ref code"
+}
 
 variable "privatevlanid" {
   default = "1102"
@@ -53,10 +53,10 @@ variable "datacenter" {
   default = "dal13"
   description = "The data center to create resources in."
 }
-variable "os_reference_code" {
-  default = "CENTOS_7_64"
-  description = "The operating system reference code used to provision the computing instance."
-}
+#variable "os_reference_code" {
+#  default = "CENTOS_7_64"
+#  description = "The operating system reference code used to provision the computing instance."
+#}
 variable "cores" {
   default = "1"
   description = "The number of CPU cores to allocate."
