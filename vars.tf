@@ -24,13 +24,13 @@ variable "ibm_sl_api_key" {
   description = "Your Bluemix Infrastructure (SoftLayer) API key."
 }
 
-variable "osrefcode" {
-  default = "input needed"
-  description = "osrefcode"
-}
+#variable "osrefcode" {
+#  default = "input needed"
+#  description = "osrefcode"
+#}
 
 variable "privatevlanid" {
-  default = "input needed"
+  default = "1102"
   description = "privatelanid"
 }
 
@@ -50,7 +50,7 @@ variable "domain" {
   description = "The domain for the instance."
 }
 variable "datacenter" {
-  default = "dal10"
+  default = "dal13"
   description = "The data center to create resources in."
 }
 variable "os_reference_code" {
